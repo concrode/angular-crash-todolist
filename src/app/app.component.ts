@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 /**
  * templateUrl can change to './app.component.mytesting.html', default one is
  * './app.component.html'
+ * 
  */
 @Component({
   selector: 'app-root',

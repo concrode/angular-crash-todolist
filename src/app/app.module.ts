@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { TodoItemComponent } from './components/todo-item/todo-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent // It's defined as "export class AppComponent" in ./app.component
+    TodoComponent,
+    TodoItemComponent // It's defined as "export class AppComponent" in ./app.component
   ],
   imports: [
     BrowserModule,
