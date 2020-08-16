@@ -1,27 +1,16 @@
 <!--
-Each todo element here is from todo.component.html where 
+# Each todo element here is from "todo.component.html", see
 <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
-and todos in "let todo of todos" is from todo.component.ts where
-ngOnInit(): void {
-    this.todos = [
-      {
-        id:1,
-        title: 'Todo One',
-        completed: false
-      },
-      {
-        id:2,
-        title: 'Todo Two',
-        completed: true
-      },
-      {
-        id:3,
-        title: 'Todo Three',
-        completed: false
-      }
-    ]
-  }
+
+# [ngClass] is a way used to add classes conditionally. "setClasses()" is defined in 
+"todo-item.component.ts"
+
+# (change)="onToggle(todo)"  & (click)="onDelete(todo)" is Angular event.
 -->
-<p>
+<div [ngClass]="setClasses()">
+  <p>
+    <input (change)="onToggle(todo)" type="checkbox" />
     This is in todo-item.component.html.id:{{ todo.id}}/completed:{{ todo.completed }}
-</p>
+    <button (click)="onDelete(todo)" class="del">x</button>
+  </p>
+</div>
