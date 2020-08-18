@@ -46,7 +46,44 @@ export class TodoComponent implements OnInit {
     //   }
     // ]
 
-    this.todos = this.todoService.getTodos(); //"this.todos" gets data from "todoService";
+    //this.todos = this.todoService.getTodos(); //"this.todos" gets data from "todoService";
+    // when "this.todoService.getTodos()" is defined as below in "todo.service.ts"
+    // getTodos() {
+    //   return [
+    //     {
+    //       id:1,
+    //       title: 'Todo One',
+    //       completed: false
+    //     },
+    //     {
+    //       id:2,
+    //       title: 'Todo Two',
+    //       completed: true
+    //     },
+    //     {
+    //       id:3,
+    //       title: 'Todo Three',
+    //       completed: false
+    //     }
+    //   ]
+    // }
+
+    this.todoService.getTodos().subscribe(todos => {
+      this.todos = todos;
+    });
   }
-  
+
+  /**
+   * The function is called as "deleteTodo($event)" of (deleteTodo)="deleteTodo($event)" in "todo.component.html"
+   * 
+   * @param todo 
+   */
+  deleteTodo(todo:Todo) {
+    // Remove from UI
+    this.todos = this.todos.filter(t => t.id !== todo.id);
+
+    // Remove from server
+    this.todoService.deleteTodo(todo).subscribe();
+    //console.log("todo.component.ts-delete");
+  }
 }
