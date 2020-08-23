@@ -86,4 +86,15 @@ export class TodoComponent implements OnInit {
     this.todoService.deleteTodo(todo).subscribe();
     //console.log("todo.component.ts-delete");
   }
+
+  /**
+   * The function is called as (addTodo) of (addTodo)="addTodo($event)" in "todo.component.html"
+   * 
+   * @param todo 
+   */
+  addTodo(todo:Todo) {
+    this.todoService.addTodo(todo).subscribe(todo => {
+      this.todos.push(todo);
+    })
+  }
 }
