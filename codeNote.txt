@@ -1,3 +1,5 @@
 #This is the code part for Angular_TraversyMedia project
 
 #URL: https://www.youtube.com/watch?v=Fdf5aTYRW0E
+
+#Open visual studio code, and enter: ng serve to build and start it
