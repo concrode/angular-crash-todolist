@@ -3,8 +3,10 @@ import { Component } from '@angular/core';
 /**
  * This is typescript decorator and it includes meta-data for the component.
  * 
- * "selector" is what we're gonna use as the HTML tag to insert this commponent into the browser
+ * "selector" is what we're gonna use as the HTML tag to insert this commponent into the browser.
+ * Here, 'app-root' is used in index.html
  * 
+ * "templateUrl" can be used what we call string interpolation where we can embed variables 
  * "templateUrl" can change to './app.component.mytesting.html', default one is
  * './app.component.html'
  * 
@@ -16,8 +18,8 @@ import { Component } from '@angular/core';
 })
 
 /**
- * title is a property in /app.component.html
- * name is a property in /app.component.mytesting.html
+ * title is a property in /app.component.html and referenced by {{ title }}
+ * name is a property in /app.component.mytesting.html and referenced by {{ name }}
  */
 export class AppComponent {
   title = 'angular-crash-todolist';
