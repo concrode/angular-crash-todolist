@@ -22,5 +22,6 @@ We need to label [todo]="todo" as input in "todo-item.component.ts"
     In <app-add-todo (addTodo)="addTodo($event)"></app-add-todo>,
     (addTodo)="addTodo($event)" is to catch "addTodo($event)" from  @Output() addTodo: EventEmitter<any> = new EventEmitter() of "add-todo.component.ts"
 -->
+<h1>This is from todo.component.html</h1>
 <app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
 <app-todo-item *ngFor="let todo of todos" [todo]="todo" (deleteTodo)="deleteTodo($event)"></app-todo-item>

@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 
 /**
- * templateUrl can change to './app.component.mytesting.html', default one is
+ * This is typescript decorator and it includes meta-data for the component.
+ * 
+ * "selector" is what we're gonna use as the HTML tag to insert this commponent into the browser
+ * 
+ * "templateUrl" can change to './app.component.mytesting.html', default one is
  * './app.component.html'
  * 
  */
