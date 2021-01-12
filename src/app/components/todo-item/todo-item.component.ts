@@ -47,7 +47,7 @@ export class TodoItemComponent implements OnInit {
 
       // 'is-complete' is from todo-item.component.css" in which defined as ".is-complete".
       // Since it has hyphen, so we need single quote when referring it -> 'is-complete'
-      // The "this.todo.completed" is from "@Input() todo: Todo" in this file
+      // "this.todo.completed" is from "@Input() todo: Todo" in this file
       'is-complete': this.todo.completed 
     }
 
