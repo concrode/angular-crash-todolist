@@ -15,7 +15,8 @@ import { TodoService } from '../../services/todo.service';
 export class TodoItemComponent implements OnInit {
 
   /**
-   * "@Input() todo" here is from "todo.component.html", see [todo] in <app-todo-item *ngFor="let todo of todos" [todo]="todo">,
+   * "@Input() todo" here is from "todo.component.html", 
+   * see [todo] in <app-todo-item *ngFor="let todo of todos" [todo]="todo">,
    * which means it gets each element from todos and each element(todo) is "Todo" class model
    */
   @Input() todo: Todo;
@@ -31,12 +32,23 @@ export class TodoItemComponent implements OnInit {
   }
 
   /**
+   * This function is used in ./todo-item.component.html" where <div [ngClass]="setClasses()">
+   * 
    * Set dynamic classes binding based on "this.todo.completed"
+   * 
+   * Key in this class is from "todo-item.component.css"
+   * 
+   * Used in html (view), but implemented in xxx.ts (controller).
    */
   setClasses() {
     let classes = {
-      todo: true, // This "todo" is from "todo-item.component.css" in which defined as ".todo"
-      'is-complete': this.todo.completed // The "this.todo.completed" is from "@Input() todo: Todo" in this file
+      // This "todo" is from "todo-item.component.css" in which defined as ".todo"
+      todo: true, 
+
+      // 'is-complete' is from todo-item.component.css" in which defined as ".is-complete".
+      // Since it has hyphen, so we need single quote when referring it -> 'is-complete'
+      // The "this.todo.completed" is from "@Input() todo: Todo" in this file
+      'is-complete': this.todo.completed 
     }
 
     return classes;

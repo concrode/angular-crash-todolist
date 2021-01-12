@@ -15,7 +15,9 @@ Then todo is the each element in that todos array
 Then "todo" in "let todo of todos" is the each element in that "todos" array
 
 # "app-todo-item" is a selector in "todo-item.component.ts"
-We need to label [todo]="todo" as input in "todo-item.component.ts"
+We need to make [todo]="todo" as an input parameter in "todo-item.component.ts"
+
+<app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
 -->
 
 <!--

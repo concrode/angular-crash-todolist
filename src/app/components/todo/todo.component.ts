@@ -13,6 +13,9 @@ import { TodoService } from '../../services/todo.service'
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
+  /**
+   * Todo type is in ../models/Todo.ts
+   */
   todos:Todo[]
   
   /**

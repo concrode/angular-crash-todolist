@@ -10,7 +10,7 @@
 <div [ngClass]="setClasses()">
   <p>
     <input (change)="onToggle(todo)" type="checkbox" />
-    id:{{ todo.id}}/title:{{ todo.title}}/completed:{{ todo.completed }}
+    id:{{ todo.id }}/title:{{ todo.title }}/completed:{{ todo.completed }}
     <button (click)="onDelete(todo)" class="del">x</button>
   </p>
 </div>
