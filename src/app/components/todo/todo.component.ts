@@ -3,8 +3,9 @@ import { Todo } from '../../models/Todo' // ".." means going to parent directory
 import { TodoService } from '../../services/todo.service'
 
 /**
- * selector can be used in another html, here "selector:'app-todo'" is used in 
- * "app.component.mytesting.html"
+ * "selector" can be used in another html. 'app-todo' represents everything for './todo.component.html'
+ * when "selector:'app-todo'" is used in 'app.component.mytesting.html', which means we embed './todo.component.html'
+ * into 'app.component.mytesting.html'.
  */
 @Component({
   selector: 'app-todo',
