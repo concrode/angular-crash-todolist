@@ -36,9 +36,8 @@ export class TodoItemComponent implements OnInit {
    * 
    * Set dynamic classes binding based on "this.todo.completed"
    * 
-   * Key in this class is from "todo-item.component.css"
+   * Keys in this class are from "todo-item.component.css"
    * 
-   * Used in html (view), but implemented in xxx.ts (controller).
    */
   setClasses() {
     let classes = {

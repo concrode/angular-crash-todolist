@@ -19,16 +19,21 @@ export class TodoComponent implements OnInit {
   todos:Todo[]
   
   /**
-   * constructor is usually used to import services
+   * Constructor is usually used to import services
    * 
    * "private" means it only works here
    * 
-   * "TodoService" is from '../../services/todo.service'
+   * "TodoService" is imported from '../../services/todo.service'
    */
   constructor(private todoService:TodoService) { }
 
   /** 
+   * Constructor vs ngOnInit()
    * 
+   * Mostly we use ngOnInit for all the initialization/declaration and avoid stuff to work in the constructor. 
+   * The constructor should only be used to initialize class members but shouldn't do actual "work".
+   * So you should use constructor() to setup Dependency Injection and not much else. 
+   * ngOnInit() is better place to "start" - it's where/when components' bindings are resolved.
    */
   ngOnInit(): void {
     // // "this.todos" is hard-coded in below
