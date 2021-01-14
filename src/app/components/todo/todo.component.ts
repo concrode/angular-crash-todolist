@@ -77,6 +77,7 @@ export class TodoComponent implements OnInit {
     //   ]
     // }
 
+    // todos is the data received from observable Http response
     this.todoService.getTodos().subscribe(todos => {
       this.todos = todos;
     });

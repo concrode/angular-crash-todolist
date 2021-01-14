@@ -19,6 +19,7 @@ export class TodoService {
   constructor(private http:HttpClient) { }
 
   // Get todos
+  // `` is backtick
   getTodos():Observable<Todo[]> {
     return this.http.get<Todo[]>(`${this.todosUrl}${this.todosLimit}`);
   }
