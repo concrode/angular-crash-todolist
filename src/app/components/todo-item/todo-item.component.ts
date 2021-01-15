@@ -22,7 +22,7 @@ export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
 
   /**
-   * Emit something out to the parent component
+   * Emit something out to the parent or other component (emit outwards)
    */
   @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
 

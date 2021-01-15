@@ -22,7 +22,8 @@ We need to make [todo]="todo" as an input parameter in "todo-item.component.ts"
 
 <!--
     In <app-add-todo (addTodo)="addTodo($event)"></app-add-todo>,
-    (addTodo)="addTodo($event)" is to catch "addTodo($event)" from  @Output() addTodo: EventEmitter<any> = new EventEmitter() of "add-todo.component.ts"
+    1.(addTodo) is catcher for  @Output() addTodo: EventEmitter<any> = new EventEmitter() of "add-todo.component.ts"
+    2."(addTodo($event)" is implemented in todo.component.ts
 -->
 <h1>This is from todo.component.html</h1>
 <app-add-todo (addTodo)="addTodo($event)"></app-add-todo>

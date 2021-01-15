@@ -84,7 +84,7 @@ export class TodoComponent implements OnInit {
   }
 
   /**
-   * The function is called as "deleteTodo($event)" of (deleteTodo)="deleteTodo($event)" in "todo.component.html"
+   * The function is called deleteTodo based on "deleteTodo($event)" of (deleteTodo)="deleteTodo($event)" in "todo.component.html"
    * 
    * @param todo 
    */
@@ -98,7 +98,7 @@ export class TodoComponent implements OnInit {
   }
 
   /**
-   * The function is called as (addTodo) of (addTodo)="addTodo($event)" in "todo.component.html"
+   * The function is called addTodo based on "addTodo($event)" of (addTodo)="addTodo($event)" in "todo.component.html"
    * 
    * @param todo 
    */
