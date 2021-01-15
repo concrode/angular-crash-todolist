@@ -6,6 +6,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./add-todo.component.css']
 })
 export class AddTodoComponent implements OnInit {
+  // addTodo will be caught in <app-add-todo (addTodo)="addTodo($event)"></app-add-todo> in "todo.component.css"
   @Output() addTodo: EventEmitter<any> = new EventEmitter();
 
   title:string;
